@@ -106,7 +106,7 @@
 
     <!-- SEKCJA HERO -->
     <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex items-center min-h-[90vh]">
-        <!-- Delikatne tło geometryczne -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] md:w-[400px] md:h-[400px] bg-mech-red blur-[100px] md:blur-[150px] opacity-30 rounded-full pointer-events-none z-0"></div>
         <div class="absolute inset-0 z-0 opacity-10">
             <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
                 <defs>
@@ -120,16 +120,15 @@
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <span class="text-mech-red font-bold tracking-widest uppercase mb-2 block text-sm md:text-base">POLITECHNIKA ŚLĄSKA</span>
+            
             <h1 class="font-tech text-7xl md:text-[8rem] font-bold text-white mb-6 leading-none tracking-tight">
                 MECHCORE
             </h1>
+
             <p class="mt-4 text-lg md:text-xl text-gray-400 max-w-2xl font-light mb-10 leading-relaxed">
                 Jesteśmy kołem naukowym Politechniki Śląskiej w Gliwicach, zrzeszającym studentów, których połączyła wspólna pasja. Konstruujemy innowacyjne rozwiązania, łącząc mechanikę z nowoczesnymi technologiami i rozwijając kompetencje inżynierskie.
             </p>
             <div class="flex flex-col sm:flex-row gap-6">
-                <a href="projekty.html" class="border border-mech-red bg-transparent hover:bg-mech-red text-mech-red hover:text-white px-12 py-4 font-sans font-semibold tracking-widest uppercase transition-colors duration-300 text-center">
-                    PROJEKTY
-                </a>
                 <a href="https://forms.gle/kbE7tPbeteWXin4X6" class="border border-mech-red bg-mech-red hover:bg-mech-red-hover text-white px-12 py-4 font-sans font-semibold tracking-widest uppercase transition-colors duration-300 text-center shadow-[0_0_15px_rgba(220,38,38,0.2)]">
                     APLIKUJ DO KOŁA
                 </a>
@@ -138,42 +137,41 @@
     </section>
 
     <!-- O NAS (W stylu statystyk) -->
-    <section id="o-nas" class="py-24 bg-mech-dark">
+    <section id="o-nas" class="py-16 bg-mech-dark">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <!-- Nagłówek w stylu ze zdjęcia -->
-            <div class="mb-16">
-                <h2 class="font-tech text-4xl font-bold text-white mb-4">O nas</h2>
+            <div class="mb-10">
+                <h2 class="font-tech text-3xl md:text-4xl font-bold text-white mb-3">O nas</h2>
                 <div class="w-full max-w-md h-px bg-mech-red"></div>
             </div>
 
             <!-- Trzy kolumny ze statystykami -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                 <div class="text-center">
-                    <div class="text-7xl font-bold text-mech-red mb-3">20</div>
-                    <div class="font-bold text-white uppercase tracking-wider text-lg">CZŁONKÓW</div>
-                    <div class="text-gray-500 mt-1">Z różnych wydziałów</div>
+                    <div class="text-5xl md:text-6xl font-bold text-mech-red mb-2">20</div>
+                    <div class="font-bold text-white uppercase tracking-wider text-base">CZŁONKÓW</div>
+                    <div class="text-gray-500 mt-1 text-sm">Z różnych wydziałów</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-7xl font-bold text-mech-red mb-3">6</div>
-                    <div class="font-bold text-white uppercase tracking-wider text-lg">PROJEKTÓW</div>
-                    <div class="text-gray-500 mt-1">Które obecnie rozwijamy</div>
+                    <div class="text-5xl md:text-6xl font-bold text-mech-red mb-2">6</div>
+                    <div class="font-bold text-white uppercase tracking-wider text-base">PROJEKTÓW</div>
+                    <div class="text-gray-500 mt-1 text-sm">Które obecnie rozwijamy</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-7xl font-bold text-mech-red mb-3">4</div>
-                    <div class="font-bold text-white uppercase tracking-wider text-lg">WYDZIAŁY</div>
-                    <div class="text-gray-500 mt-1">Które reprezentujemy</div>
+                    <div class="text-5xl md:text-6xl font-bold text-mech-red mb-2">4</div>
+                    <div class="font-bold text-white uppercase tracking-wider text-base">WYDZIAŁY</div>
+                    <div class="text-gray-500 mt-1 text-sm">Które reprezentujemy</div>
                 </div>
             </div>
 
             <!-- Tekst o zespole -->
             <div class="max-w-5xl">
-                <h3 class="font-tech text-2xl font-bold text-white mb-4">Nasz zespół</h3>
-                <p class="text-gray-400 leading-relaxed mb-8 text-justify">
+                <h3 class="font-tech text-xl font-bold text-white mb-3">Nasz zespół</h3>
+                <p class="text-gray-400 leading-relaxed mb-6 text-justify">
                     SKN Mechcore to zespół ambitnych studentów działających przy Politechnice Śląskiej, których łączy pasja do nowoczesnych technologii i inżynierii. Działalność zespołu skupia się wokół tworzenia innowacyjnych rozwiązań technicznych. Obecnie nasz zespół liczy 20 osób, a nasze wysiłki koncentrujemy na 6 równolegle rozwijanych projektach badawczo-rozwojowych. Szeroki zakres prac, obejmujący mechanikę, elektronikę oraz programowanie, podkreśla międzywydziałowy charakter koła naukowego i pozwala na dynamiczny rozwój różnorodnych zainteresowań studentów z wielu wydziałów naszej uczelni.
                 </p>
-                <a href="projekty.html" class="inline-block bg-mech-red hover:bg-mech-red-hover text-white px-10 py-3 font-sans font-semibold tracking-widest uppercase transition-colors duration-300">
-                    NASZE PROJEKTY
+                <a href="onas.html" class="inline-block bg-mech-red hover:bg-mech-red-hover text-white px-8 py-3 font-sans font-semibold tracking-widest uppercase transition-colors duration-300">
+                    WIĘCEJ O NAS
                 </a>
             </div>
 
@@ -295,11 +293,8 @@
 
                 <!-- Przyciski -->
                 <div class="flex flex-col sm:flex-row gap-6">
-                    <a href="#" class="bg-mech-red hover:bg-mech-red-hover text-white px-12 py-4 font-sans font-semibold tracking-widest uppercase transition-colors duration-300 text-center">
-                        REKRUTACJA
-                    </a>
-                    <a href="mailto:kontakt@mechcore.polsl.pl" class="border border-mech-red bg-transparent hover:bg-mech-red text-mech-red hover:text-white px-12 py-4 font-sans font-semibold tracking-widest uppercase transition-colors duration-300 text-center">
-                        SPONSORING
+                    <a href="https://forms.gle/kbE7tPbeteWXin4X6" target="_blank" rel="noopener noreferrer" class="bg-mech-red hover:bg-mech-red-hover text-white px-12 py-4 font-sans font-semibold tracking-widest uppercase transition-colors duration-300 text-center">
+                        WYPEŁNIJ FORMULARZ
                     </a>
                 </div>
             </div>
