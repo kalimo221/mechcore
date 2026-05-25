@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasi Partnerzy | Koło Naukowe Mechcore</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Poznaj firmy, instytucje i wydziały, które wspierają rozwój Koła Naukowego Mechcore. Zobacz z kim współpracujemy przy tworzeniu innowacji.">
+    <meta name="keywords" content="partnerzy, sponsorzy, współpraca, Mechcore, Politechnika Śląska, firmy inżynieryjne, wsparcie">
+    <meta name="author" content="SKN Mechcore">
+    <meta name="robots" content="index, follow">
+
+    <!-- Bezpieczeństwo (Security Headers) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com https://logo.clearbit.com; connect-src 'self'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Czcionki Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Ikony Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mech-black': '#0a0a0a',
+                        'mech-dark': '#141414',
+                        'mech-card': '#1f1f1f',
+                        'mech-red': '#dc2626',
+                        'mech-red-hover': '#b91c1c',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        tech: ['Rajdhani', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #dc2626; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #b91c1c; }
+        
+        .glass-nav {
+            background: rgba(10, 10, 10, 0.9);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-mech-black text-gray-300 font-sans antialiased selection:bg-mech-red selection:text-white">
+
+    <!-- NAWIGACJA (Z nową zakładką KONTAKT) -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 cursor-pointer transition-opacity hover:opacity-80">
+                    <i data-lucide="cpu" class="text-mech-red w-8 h-8"></i>
+                    <span class="font-tech text-3xl font-bold text-white tracking-wider">MECH<span class="text-mech-red">CORE</span></span>
+                </a>
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="onas.html" class="text-sm font-semibold hover:text-mech-red transition-colors uppercase tracking-widest">O nas</a>
+                    <a href="projekty.html" class="text-sm font-semibold hover:text-mech-red transition-colors uppercase tracking-widest">Projekty</a>
+                    <a href="partnerzy.html" class="text-sm font-semibold text-mech-red uppercase tracking-widest">Partnerzy</a>
+                    <a href="kontakt.html" class="text-sm font-semibold hover:text-mech-red transition-colors uppercase tracking-widest">Kontakt</a>
+                    <a href="https://forms.gle/kbE7tPbeteWXin4X6" target="_blank" rel="noopener noreferrer" class="bg-mech-red hover:bg-mech-red-hover text-white px-6 py-2 rounded-md font-semibold transition-colors uppercase tracking-wider shadow-[0_0_15px_rgba(220,38,38,0.3)]">Dołącz do nas</a>
+                </div>
+                <!-- Menu Mobile Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" aria-label="Otwórz menu nawigacyjne" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menu Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-mech-dark border-b border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
+                <a href="onas.html" class="px-3 py-2 rounded-md text-base font-medium hover:text-mech-red">O nas</a>
+                <a href="projekty.html" class="px-3 py-2 rounded-md text-base font-medium hover:text-mech-red">Projekty</a>
+                <a href="partnerzy.html" class="px-3 py-2 rounded-md text-base font-medium hover:text-mech-red">Partnerzy</a>
+                <a href="kontakt.html" class="px-3 py-2 rounded-md text-base font-medium text-mech-red">Kontakt</a>
+                <a href="https://forms.gle/kbE7tPbeteWXin4X6" target="_blank" rel="noopener noreferrer" class="px-3 py-2 text-mech-red font-bold">Dołącz do nas</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER PODSTRONY -->
+    <header class="pt-32 pb-16 bg-mech-dark border-b border-gray-800 relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-5">
+            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="font-tech text-5xl md:text-6xl font-bold text-white mb-4 uppercase tracking-wider">
+                Nasi <span class="text-mech-red">Partnerzy</span>
+            </h1>
+            <div class="w-24 h-1 bg-mech-red mx-auto rounded-full mb-6"></div>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto font-light">
+                Innowacje tworzymy wspólnie. Dziękujemy uczelni, firmom i instytucjom, które pomagają nam przesuwać granice inżynierii.
+            </p>
+        </div>
+    </header>
+
+    <!-- WYDZIAŁY WSPÓŁPRACUJĄCE -->
+    <section class="py-20 bg-mech-black border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-tech text-3xl font-bold text-white uppercase tracking-widest">Wydziały Politechniki Śląskiej</h2>
+            </div>
+            
+            <div class="flex flex-wrap justify-center items-center gap-6 md:gap-8">
+                <!-- W. Architektury -->
+                <div class="bg-mech-dark px-8 py-5 rounded-xl border border-gray-800 flex items-center gap-4 hover:border-mech-red hover:shadow-[0_0_20px_rgba(220,38,38,0.15)] transition-all duration-300">
+                    <div class="w-12 h-12 bg-mech-card rounded-full flex items-center justify-center border border-gray-700">
+                        <i data-lucide="building" class="text-mech-red w-6 h-6"></i>
+                    </div>
+                    <span class="font-tech font-bold text-white text-lg uppercase tracking-wider">W. Architektury</span>
+                </div>
+                
+                <!-- W. Chemiczny -->
+                <div class="bg-mech-dark px-8 py-5 rounded-xl border border-gray-800 flex items-center gap-4 hover:border-mech-red hover:shadow-[0_0_20px_rgba(220,38,38,0.15)] transition-all duration-300">
+                    <div class="w-12 h-12 bg-mech-card rounded-full flex items-center justify-center border border-gray-700">
+                        <i data-lucide="beaker" class="text-mech-red w-6 h-6"></i>
+                    </div>
+                    <span class="font-tech font-bold text-white text-lg uppercase tracking-wider">W. Chemiczny</span>
+                </div>
+                
+                <!-- W. Elektryczny -->
+                <div class="bg-mech-dark px-8 py-5 rounded-xl border border-gray-800 flex items-center gap-4 hover:border-mech-red hover:shadow-[0_0_20px_rgba(220,38,38,0.15)] transition-all duration-300">
+                    <div class="w-12 h-12 bg-mech-card rounded-full flex items-center justify-center border border-gray-700">
+                        <i data-lucide="zap" class="text-mech-red w-6 h-6"></i>
+                    </div>
+                    <span class="font-tech font-bold text-white text-lg uppercase tracking-wider">W. Elektryczny</span>
+                </div>
+                
+                <!-- W. Inżynierii Biomedycznej -->
+                <div class="bg-mech-dark px-8 py-5 rounded-xl border border-gray-800 flex items-center gap-4 hover:border-mech-red hover:shadow-[0_0_20px_rgba(220,38,38,0.15)] transition-all duration-300">
+                    <div class="w-12 h-12 bg-mech-card rounded-full flex items-center justify-center border border-gray-700">
+                        <i data-lucide="activity" class="text-mech-red w-6 h-6"></i>
+                    </div>
+                    <span class="font-tech font-bold text-white text-lg uppercase tracking-wider">W. Inż. Biomedycznej</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPONSORZY I PARTNERZY TECHNOLOGICZNI (Dopasowane tło) -->
+    <section class="py-24 bg-mech-dark border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-16">
+                <h2 class="font-tech text-3xl font-bold text-white uppercase tracking-widest">Sponsorzy Główni i Partnerzy</h2>
+            </div>
+
+            <!-- Panel z logotypami w stylu strony głównej -->
+            <div class="bg-mech-card border border-gray-800 rounded-2xl p-8 md:p-16">
+                <div class="flex flex-wrap justify-center items-center gap-16 md:gap-24">
+
+                    <!-- Hospel -->
+                    <a href="https://www.hospel.pl/" target="_blank" rel="noopener noreferrer" class="font-tech text-3xl md:text-4xl font-bold text-white hover:text-mech-red transition-all duration-300 flex flex-col justify-center text-center">
+                        <span>HOSPEL</span><span class="text-[11px] md:text-[13px] text-gray-500 mt-2 tracking-widest uppercase">Sosnowiec</span>
+                    </a>
+
+                    <!-- Piomet -->
+                    <div class="font-tech text-3xl md:text-4xl font-bold text-white flex flex-col justify-center text-center cursor-default">
+                        <span>PIOMET</span><span class="text-[11px] md:text-[13px] text-gray-500 mt-2 tracking-widest uppercase">Rybnik</span>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ZACHĘTA DO WSPÓŁPRACY (CTA) -->
+    <section class="py-24 bg-mech-black">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <i data-lucide="handshake" class="w-16 h-16 text-mech-red mx-auto mb-6"></i>
+            <h2 class="font-tech text-4xl font-bold text-white mb-6 uppercase">Chcesz dołączyć do tego grona?</h2>
+            <p class="text-gray-400 text-lg mb-10 leading-relaxed">
+                Stale poszukujemy firm gotowych wesprzeć innowacyjne projekty studenckie, a także ambitnych studentów chcących rozwijać swoje inżynierskie pasje w naszym zespole.
+            <br><br>
+                Wypełnij formularz, a niebawem się odezwiemy.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfZA3DveJvS_ekaSOoUqefoJgGIkFqdjJn6uD21Hm6fQR2TtA/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" class="w-full h-full min-h-[600px] bg-white">Ładuję formularz…</iframe>
+                </a>
+            </div>
+        </div>
+    </section>
+
+<!-- ROZBUDOWANY FOOTER -->
+<footer class="bg-[#050505] border-t border-gray-800 pt-16 pb-6 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            
+            <!-- Kolumna 1: Logo, Bio, Social Media -->
+            <div class="lg:col-span-1">
+                <div class="flex items-center gap-2 mb-6">
+                    <i data-lucide="cpu" class="text-mech-red w-7 h-7"></i>
+                    <span class="font-tech text-2xl font-bold text-white tracking-wider">MECH<span class="text-mech-red">CORE</span></span>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6 text-justify">
+                    SKN Mechcore jest kołem studenckim działającym przy Politechnice Śląskiej w Gliwicach. Skupiamy pasjonatów inżynierii, mechaniki i nowoczesnych technologii. Regularnie realizujemy innowacyjne projekty techniczne.
+                </p>
+                <div class="flex gap-5">
+                    <a href="#" aria-label="Odwiedź nasz profil na Facebooku" target="_blank" rel="noopener noreferrer" class="text-white hover:text-mech-red transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="#" aria-label="Odwiedź nasz profil na Instagramie" target="_blank" rel="noopener noreferrer" class="text-white hover:text-mech-red transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="#" aria-label="Odwiedź nasz profil na LinkedIn" target="_blank" rel="noopener noreferrer" class="text-white hover:text-mech-red transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                    <a href="#" aria-label="Odwiedź nasz kanał na YouTube" target="_blank" rel="noopener noreferrer" class="text-white hover:text-mech-red transition-colors"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+
+            <!-- Kolumna 2: Nawigacja -->
+            <div>
+                <h3 class="text-mech-red font-bold text-lg mb-6">Nawigacja</h3>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li><a href="onas.html" class="hover:text-white transition-colors">O nas</a></li>
+                    <li><a href="projekty.html" class="hover:text-white transition-colors">Projekty</a></li>
+                    <li><a href="partnerzy.html" class="hover:text-white transition-colors">Partnerzy</a></li>
+                    <li><a href="kontakt.html" class="text-white transition-colors">Kontakt</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolumna 3: Informacje -->
+            <div>
+                <h3 class="text-mech-red font-bold text-lg mb-6">Informacje</h3>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li><a href="https://forms.gle/kbE7tPbeteWXin4X6" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Sponsoring</a></li>
+                    <li><a href="https://forms.gle/kbE7tPbeteWXin4X6" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Rekrutacja</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Polityka prywatności</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolumna 4: Kontakt -->
+            <div>
+                <h3 class="text-mech-red font-bold text-lg mb-6">Kontakt</h3>
+                <ul class="space-y-4 text-sm text-gray-300">
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="phone" class="w-5 h-5 text-gray-400 shrink-0"></i>
+                        <span>+48 733 990 885</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="mail" class="w-5 h-5 text-gray-400 shrink-0"></i>
+                        <a href="mailto:mechcore.polsl@gmail.com" class="hover:text-white transition-colors break-all">mechcore.polsl@gmail.com</a>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-gray-400 shrink-0"></i>
+                        <span>Stanisława Konarskiego 18A,<br>44-100 Gliwice</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Dolny pasek -->
+        <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+            <div>
+                Projekt i wykonanie: <span class="text-gray-400">Tomasz P.</span>
+            </div>
+            <div>
+                &copy; Wszelkie prawa zastrzeżone | Mechcore 2026
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Skrypty -->
+    <script>
+        lucide.createIcons();
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
