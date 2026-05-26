@@ -12,7 +12,7 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://mechcore.polsl.pl/">
 
-    <!-- Open Graph / Social Media (Wygląd linku przy udostępnianiu) -->
+    <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mechcore.polsl.pl/">
     <meta property="og:title" content="Koło Naukowe Mechcore | Politechnika Śląska">
@@ -23,7 +23,7 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com https://logo.clearbit.com; connect-src 'self'">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
-    <!-- Czcionki Google Fonts: Rajdhani (nagłówki - lekko techniczny wygląd) i Inter (czytelny tekst) -->
+    <!-- Czcionki Google Fonts: Rajdhani i Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
@@ -53,7 +53,6 @@
         }
     </script>
     <style>
-        /* Niestandardowe paski przewijania pasujące do motywu */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #0a0a0a; }
         ::-webkit-scrollbar-thumb { background: #dc2626; border-radius: 4px; }
@@ -67,7 +66,7 @@
 </head>
 <body class="bg-mech-black text-gray-300 font-sans antialiased selection:bg-mech-red selection:text-white">
 
-    <!-- NAWIGACJA (Z nową zakładką KONTAKT) -->
+    <!-- NAWIGACJA -->
     <nav class="fixed w-full z-50 glass-nav border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
@@ -136,7 +135,7 @@
         </div>
     </section>
 
-    <!-- O NAS (W stylu statystyk) -->
+    <!-- O NAS -->
     <section id="o-nas" class="py-16 bg-mech-dark">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
@@ -178,56 +177,55 @@
         </div>
     </section>
 
-    <!-- GALERIA PROJEKTÓW -->
-    <section id="projekty" class="py-24 bg-mech-black relative">
+   <!-- GALERIA PROJEKTÓW -->
+    <section id="projekty" class="py-16 bg-mech-black relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-16 text-center">
+            <div class="mb-12 text-center">
                 <h2 class="font-tech text-4xl md:text-5xl font-bold text-white mb-4">Nasze <span class="text-mech-red">Projekty</span></h2>
                 <div class="w-24 h-1 bg-mech-red mx-auto rounded-full"></div>
                 <p class="mt-6 text-gray-400 max-w-2xl mx-auto">Zobacz, nad czym aktualnie pracujemy i z czego jesteśmy najbardziej dumni.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Projekt 1 -->
-                <div class="bg-mech-card rounded-xl overflow-hidden group cursor-pointer border border-gray-800 hover:border-mech-red transition-all duration-300">
+                <!-- Projekt 1: ARES -->
+                <a href="projekt_robot_ares.html" class="block bg-mech-card rounded-xl overflow-hidden group cursor-pointer border border-gray-800 hover:border-mech-red transition-all duration-300">
                     <div class="h-48 bg-gray-800 relative overflow-hidden">
-                        <!-- Miejsce na zdjęcie projektu. Zamień src na prawdziwy link -->
-                        <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=800&q=80" alt="Projekt Łazik" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70 group-hover:opacity-100">
+                        <img src="https://images.unsplash.com/photo-1599577180570-89115f577eb8?auto=format&fit=crop&w=800&q=80" alt="Robot Rozpoznawczy ARES" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70 group-hover:opacity-100">
                     </div>
                     <div class="p-6">
-                        <span class="text-mech-red text-xs font-bold uppercase tracking-wider">Robotyka</span>
-                        <h3 class="font-tech text-2xl font-bold text-white mt-2 mb-3">Projekt X-Rover</h3>
-                        <p class="text-gray-400 text-sm">Autonomiczny pojazd badawczy wyposażony w moduł analizy próbek. Projekt realizowany we współpracy z wydziałem MT.</p>
+                        <span class="text-mech-red text-xs font-bold uppercase tracking-wider">Robotyka / Rescue Tech</span>
+                        <h3 class="font-tech text-2xl font-bold text-white mt-2 mb-3">Robot Rozpoznawczy ARES</h3>
+                        <p class="text-gray-400 text-sm">Autonomiczna platforma gąsienicowa do mapowania taktycznego 3D i detekcji zagrożeń w trudnych warunkach pożarowych i wojskowych.</p>
                     </div>
-                </div>
+                </a>
 
-                <!-- Projekt 2 -->
-                <div class="bg-mech-card rounded-xl overflow-hidden group cursor-pointer border border-gray-800 hover:border-mech-red transition-all duration-300">
+                <!-- Projekt 2: Ramię Bioniczne -->
+                <a href="projekt_rami_bioniczne.html" class="block bg-mech-card rounded-xl overflow-hidden group cursor-pointer border border-gray-800 hover:border-mech-red transition-all duration-300">
                     <div class="h-48 bg-gray-800 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Ramię Robotyczne" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70 group-hover:opacity-100">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Ramię Bioniczne" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70 group-hover:opacity-100">
                     </div>
                     <div class="p-6">
-                        <span class="text-mech-red text-xs font-bold uppercase tracking-wider">Automatyka</span>
+                        <span class="text-mech-red text-xs font-bold uppercase tracking-wider">Automatyka / Robotyka</span>
                         <h3 class="font-tech text-2xl font-bold text-white mt-2 mb-3">Ramię Bioniczne</h3>
-                        <p class="text-gray-400 text-sm">Prototyp lekkiego ramienia o 6 stopniach swobody, drukowany w technologii 3D z wykorzystaniem zaawansowanych polimerów.</p>
+                        <p class="text-gray-400 text-sm">Prototyp innowacyjnej, lekkiej protezy ramienia o 6 stopniach swobody, sterowanej za pomocą ludzkich mięśni (sygnały EMG).</p>
                     </div>
-                </div>
+                </a>
 
-                <!-- Projekt 3 -->
-                <div class="bg-mech-card rounded-xl overflow-hidden group cursor-pointer border border-gray-800 hover:border-mech-red transition-all duration-300">
+                <!-- Projekt 3: Robot 6-osiowy Astora -->
+                <a href="projekt_robot_astora.html" class="block bg-mech-card rounded-xl overflow-hidden group cursor-pointer border border-gray-800 hover:border-mech-red transition-all duration-300">
                     <div class="h-48 bg-gray-800 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1580828369019-2238f6b0f69a?auto=format&fit=crop&w=800&q=80" alt="Symulacje" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70 group-hover:opacity-100">
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80" alt="Robot 6-osiowy Astora" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70 group-hover:opacity-100">
                     </div>
                     <div class="p-6">
-                        <span class="text-mech-red text-xs font-bold uppercase tracking-wider">Konstrukcja</span>
-                        <h3 class="font-tech text-2xl font-bold text-white mt-2 mb-3">Symulator Lotu UAV</h3>
-                        <p class="text-gray-400 text-sm">Platforma testowa do symulacji zachowań bezzałogowych statków powietrznych w trudnych warunkach atmosferycznych.</p>
+                        <span class="text-mech-red text-xs font-bold uppercase tracking-wider">Automatyka / Robotyka</span>
+                        <h3 class="font-tech text-2xl font-bold text-white mt-2 mb-3">Robot 6-osiowy typu astora</h3>
+                        <p class="text-gray-400 text-sm">Edukacyjne, 6-osiowe ramię robotyczne stworzone w technologii druku 3D. Baza do nauki programowania w systemie ROS.</p>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- Przycisk "Wszystkie projekty" -->
-            <div class="mt-16 flex justify-center">
+            <div class="mt-12 flex justify-center">
                 <a href="projekty.html" class="border border-mech-red bg-transparent hover:bg-mech-red text-mech-red hover:text-white px-12 py-4 font-sans font-semibold tracking-widest uppercase transition-colors duration-300 text-center">
                     WSZYSTKIE PROJEKTY
                 </a>
@@ -236,47 +234,69 @@
         </div>
     </section>
 
-    <!-- WSPÓŁPRACA (Wąska wstawka z logotypami) -->
+    <!-- WSPÓŁPRACA -->
     <section id="wspolpraca" class="py-12 bg-mech-card border-y border-gray-800 shadow-[0_0_30px_rgba(0,0,0,0.5)] z-10 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <!-- Dodany nagłówek sekcji partnerów -->
-            <div class="text-center mb-10">
-                <h2 class="text-sm font-bold text-gray-500 tracking-widest">NASI PARTNERZY i wydziały współpracujące</h2>
-            </div>
-
-            <div class="flex flex-col gap-8 md:gap-10">
-                <!-- Wydziały (Pierwsza linia) - Usunięto filtry grayscale i opacity -->
-                <div class="flex flex-wrap justify-center items-center gap-10 md:gap-14">
-                    <div class="flex items-center gap-2 text-gray-300 font-bold text-xs md:text-sm uppercase tracking-wider">
-                        <i data-lucide="building" class="w-5 h-5 text-mech-red"></i> W. Architektury
+            <div class="flex flex-col gap-12 md:gap-16">
+                
+                <!-- Wydziały Współpracujące -->
+                <div>
+                    <div class="text-center mb-8">
+                        <h2 class="text-sm font-bold text-gray-500 tracking-widest uppercase">Wydziały współpracujące</h2>
                     </div>
-                    <div class="flex items-center gap-2 text-gray-300 font-bold text-xs md:text-sm uppercase tracking-wider">
-                        <i data-lucide="beaker" class="w-5 h-5 text-mech-red"></i> W. Chemiczny
-                    </div>
-                    <div class="flex items-center gap-2 text-gray-300 font-bold text-xs md:text-sm uppercase tracking-wider">
-                        <i data-lucide="zap" class="w-5 h-5 text-mech-red"></i> W. Elektryczny
-                    </div>
-                    <div class="flex items-center gap-2 text-gray-300 font-bold text-xs md:text-sm uppercase tracking-wider">
-                        <i data-lucide="activity" class="w-5 h-5 text-mech-red"></i> W. Inż. Biomedycznej
+                    <div class="flex flex-wrap justify-center items-start gap-6 md:gap-10">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-3 group w-32 md:w-40">
+                            <div class="bg-white/5 px-4 py-2 rounded-lg group-hover:bg-white/10 transition-colors h-16 md:h-20 w-full flex items-center justify-center">
+                                <img src="logo_arch.png" alt="Wydział Architektury" class="max-w-full max-h-full object-contain mx-auto">
+                            </div>
+                            <span class="text-[10px] md:text-xs text-gray-400 font-semibold uppercase tracking-widest text-center group-hover:text-white transition-colors">Wydział Architektury</span>
+                        </a>
+                        
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-3 group w-32 md:w-40">
+                            <div class="bg-white/5 px-4 py-2 rounded-lg group-hover:bg-white/10 transition-colors h-16 md:h-20 w-full flex items-center justify-center">
+                                <img src="RCH.png" alt="Wydział Chemiczny" class="max-w-full max-h-full object-contain mx-auto">
+                            </div>
+                            <span class="text-[10px] md:text-xs text-gray-400 font-semibold uppercase tracking-widest text-center group-hover:text-white transition-colors">Wydział Chemiczny</span>
+                        </a>
+                        
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-3 group w-32 md:w-40">
+                            <div class="bg-white/5 px-4 py-2 rounded-lg group-hover:bg-white/10 transition-colors h-16 md:h-20 w-full flex items-center justify-center">
+                                <img src="logoRE100.png" alt="Wydział Elektryczny" class="max-w-full max-h-full object-contain mx-auto">
+                            </div>
+                            <span class="text-[10px] md:text-xs text-gray-400 font-semibold uppercase tracking-widest text-center group-hover:text-white transition-colors">Wydział Elektryczny</span>
+                        </a>
+                        
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-3 group w-32 md:w-40">
+                            <div class="bg-white/5 px-4 py-2 rounded-lg group-hover:bg-white/10 transition-colors h-16 md:h-20 w-full flex items-center justify-center">
+                                <img src="WIB_logo.png" alt="Wydział Inżynierii Biomedycznej" class="max-w-full max-h-full object-contain mx-auto">
+                            </div>
+                            <span class="text-[10px] md:text-xs text-gray-400 font-semibold uppercase tracking-widest text-center group-hover:text-white transition-colors">Wydział Inżynierii Biomedycznej</span>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Firmy (Druga linia) -->
-                <div class="flex flex-wrap justify-center items-center gap-10 md:gap-14 grayscale hover:grayscale-0 transition-all duration-500 opacity-70 hover:opacity-100">
-                    <a href="https://www.hospel.pl/" target="_blank" rel="noopener noreferrer" class="font-tech text-xl md:text-2xl font-bold text-gray-300 leading-none flex flex-col justify-center text-center px-4 py-2 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
-                        <span>HOSPEL</span><span class="text-xs md:text-sm text-gray-400 mt-1">SOSNOWIEC</span>
-                    </a>
-                    <div class="font-tech text-xl md:text-2xl font-bold text-gray-300 leading-none flex flex-col justify-center text-center px-4 py-2 bg-white/5 rounded-lg hover:bg-white/10 transition-colors cursor-default">
-                        <span>PIOMET</span><span class="text-xs md:text-sm text-gray-400 mt-1">RYBNIK</span>
+                <!-- Nasi Partnerzy -->
+                <div>
+                    <div class="text-center mb-8">
+                        <h2 class="text-sm font-bold text-gray-500 tracking-widest uppercase">Nasi Partnerzy</h2>
+                    </div>
+                    <div class="flex flex-wrap justify-center items-center gap-10 md:gap-14">
+                        <a href="https://www.hospel.pl/" target="_blank" rel="noopener noreferrer" class="font-tech text-xl md:text-2xl font-bold text-gray-300 leading-none flex flex-col justify-center text-center px-4 py-2 bg-white/5 rounded-lg hover:bg-white/10 transition-colors h-16 md:h-20 w-40 md:w-48">
+                            <img src="hospel.png" alt="Hospel" class="max-w-full max-h-full object-contain mx-auto">
+                        </a>
+                        <div class="font-tech text-xl md:text-2xl font-bold text-gray-300 leading-none flex flex-col justify-center text-center px-4 py-2 bg-white/5 rounded-lg hover:bg-white/10 transition-colors cursor-default h-16 md:h-20 w-40 md:w-48">
+                            <img src="Piomet-logo_v3_alpha.png" alt="Piomet" class="max-w-full max-h-full object-contain mx-auto">
+                        </div>
                     </div>
                 </div>
+
             </div>
             
         </div>
     </section>
 
-    <!-- DOŁĄCZ DO ZESPOŁU (CTA) -->
+    <!-- DOŁĄCZ DO ZESPOŁU -->
     <section id="rekrutacja" class="py-24 bg-mech-black">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl">
@@ -376,7 +396,7 @@
         </div>
     </footer>
 
-    <!-- Skrypt inicjujący ikony (Lucide) i obsługę menu mobilnego -->
+    <!-- Skrypt inicjujący ikony i obsługę menu mobilnego -->
     <script>
         // Inicjalizacja ikon Lucide
         lucide.createIcons();
