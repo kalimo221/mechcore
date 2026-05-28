@@ -3,27 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projekty | Koło Naukowe Mechcore</title>
+    <title>SKN Mechcore</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Portfolio projektów Koła Naukowego Mechcore. Zobacz nasze konstrukcje: od łazików marsjańskich po symulatory lotu i zaawansowaną automatykę.">
-    <meta name="keywords" content="projekty studenckie, portfolio inżynierskie, robotyka, automatyka, łazik marsjański, drony, Mechcore">
-    <meta name="author" content="SKN Mechcore">
+    <meta name="description" content="SKN Mechcore (Politechnika Śląska) to interdyscyplinarny zespół badawczy. Realizujemy zaawansowane projekty z zakresu robotyki, automatyki, mechatroniki i systemów wbudowanych.">
+    <meta name="keywords" content="SKN Mechcore, Politechnika Śląska, koło naukowe, inżynieria systemów, robotyka, mechatronika, automatyka przemysłowa, R&D, Gliwice">
+    <meta name="author" content="SKN Inżynierii Konstrukcyjnej i Systemów Technicznych Mechcore">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mechcore.dev/">
 
-    <!-- Bezpieczeństwo (Security Headers) -->
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mechcore.dev/">
+    <meta property="og:title" content="SKN Mechcore | Inżynieria Konstrukcyjna i Systemy Techniczne">
+    <meta property="og:description" content="Projektujemy prototypy i systemy cyberfizyczne. Skupiamy się na innowacjach w mechanice, elektronice i oprogramowaniu.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:image:alt" content="Inżynier pracujący nad ramieniem bionicznym w laboratorium">
+
+    <!-- Bezpieczeństwo -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com https://logo.clearbit.com; connect-src 'self'">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
-    <!-- Czcionki Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Ikony Lucide -->
     <script src="https://unpkg.com/lucide@latest"></script>
-
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -49,225 +54,275 @@
         ::-webkit-scrollbar-track { background: #0a0a0a; }
         ::-webkit-scrollbar-thumb { background: #dc2626; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #b91c1c; }
-        
-        .glass-nav {
-            background: rgba(10, 10, 10, 0.9);
-            backdrop-filter: blur(10px);
-        }
+        .glass-nav { background: rgba(10, 10, 10, 0.9); backdrop-filter: blur(10px); }
     </style>
 </head>
 <body class="bg-mech-black text-gray-300 font-sans antialiased selection:bg-mech-red selection:text-white">
 
-    <!-- NAWIGACJA (Z nową zakładką KONTAKT) -->
-    <nav class="fixed w-full z-50 glass-nav border-b border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 cursor-pointer transition-opacity hover:opacity-80">
-                    <i data-lucide="cpu" class="text-mech-red w-8 h-8"></i>
-                    <span class="font-tech text-3xl font-bold text-white tracking-wider">MECH<span class="text-mech-red">CORE</span></span>
-                </a>
-                <!-- Menu Desktop -->
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="onas.html" class="text-sm font-semibold hover:text-mech-red transition-colors uppercase tracking-widest">O nas</a>
-                    <a href="projekty.html" class="text-sm font-semibold text-mech-red uppercase tracking-widest">Projekty</a>
-                    <a href="partnerzy.html" class="text-sm font-semibold hover:text-mech-red transition-colors uppercase tracking-widest">Partnerzy</a>
-                    <a href="kontakt.html" class="text-sm font-semibold hover:text-mech-red transition-colors uppercase tracking-widest">Kontakt</a>
-                    <a href="https://forms.gle/kbE7tPbeteWXin4X6" target="_blank" rel="noopener noreferrer" class="bg-mech-red hover:bg-mech-red-hover text-white px-6 py-2 rounded-md font-semibold transition-colors uppercase tracking-wider shadow-[0_0_15px_rgba(220,38,38,0.3)]">Dołącz do nas</a>
-                </div>
-                <!-- Menu Mobile Button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" aria-label="Otwórz menu nawigacyjne" class="text-gray-300 hover:text-white focus:outline-none">
-                        <i data-lucide="menu" class="w-8 h-8"></i>
-                    </button>
+    <header>
+        <nav class="fixed w-full z-50 glass-nav border-b border-gray-800" aria-label="Główna nawigacja">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20">
+                    <a href="index.html" class="flex-shrink-0 flex items-center gap-2 cursor-pointer transition-opacity hover:opacity-80" aria-label="Strona główna Mechcore">
+                        <i data-lucide="cpu" class="text-mech-red w-8 h-8" aria-hidden="true"></i>
+                        <span class="font-tech text-3xl font-bold text-white tracking-wider">MECH<span class="text-mech-red">CORE</span></span>
+                    </a>
+                    <div class="hidden md:flex space-x-8 items-center">
+                        <a href="onas.html" class="text-sm font-semibold hover:text-mech-red transition-colors uppercase tracking-widest">O nas</a>
+                        <a href="projekty.html" class="text-sm font-semibold hover:text-mech-red transition-colors uppercase tracking-widest">Projekty</a>
+                        <a href="partnerzy.html" class="text-sm font-semibold hover:text-mech-red transition-colors uppercase tracking-widest">Partnerzy</a>
+                        <a href="kontakt.html" class="text-sm font-semibold hover:text-mech-red transition-colors uppercase tracking-widest">Kontakt</a>
+                        <a href="https://forms.gle/kbE7tPbeteWXin4X6" target="_blank" rel="noopener noreferrer" class="bg-mech-red hover:bg-mech-red-hover text-white px-6 py-2 rounded-md font-semibold transition-colors uppercase tracking-wider shadow-[0_0_15px_rgba(220,38,38,0.3)]">Aplikuj</a>
+                    </div>
+                    <div class="md:hidden flex items-center">
+                        <button id="mobile-menu-btn" aria-label="Otwórz menu nawigacyjne" aria-expanded="false" class="text-gray-300 hover:text-white focus:outline-none">
+                            <i data-lucide="menu" class="w-8 h-8" aria-hidden="true"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- Menu Mobile Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-mech-dark border-b border-gray-800">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
-                <a href="onas.html" class="px-3 py-2 rounded-md text-base font-medium hover:text-mech-red">O nas</a>
-                <a href="projekty.html" class="px-3 py-2 rounded-md text-base font-medium hover:text-mech-red">Projekty</a>
-                <a href="partnerzy.html" class="px-3 py-2 rounded-md text-base font-medium hover:text-mech-red">Partnerzy</a>
-                <a href="kontakt.html" class="px-3 py-2 rounded-md text-base font-medium text-mech-red">Kontakt</a>
-                <a href="https://forms.gle/kbE7tPbeteWXin4X6" target="_blank" rel="noopener noreferrer" class="px-3 py-2 text-mech-red font-bold">Dołącz do nas</a>
+            <div id="mobile-menu" class="hidden md:hidden bg-mech-dark border-b border-gray-800" aria-label="Menu mobilne">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
+                    <a href="o-nas.html" class="px-3 py-2 rounded-md text-base font-medium hover:text-mech-red">O nas</a>
+                    <a href="projekty.html" class="px-3 py-2 rounded-md text-base font-medium hover:text-mech-red">Projekty</a>
+                    <a href="partnerzy.html" class="px-3 py-2 rounded-md text-base font-medium hover:text-mech-red">Partnerzy</a>
+                    <a href="kontakt.html" class="px-3 py-2 rounded-md text-base font-medium text-mech-red">Kontakt</a>
+                    <a href="https://forms.gle/kbE7tPbeteWXin4X6" target="_blank" rel="noopener noreferrer" class="px-3 py-2 text-mech-red font-bold">Dołącz do nas</a>
+                </div>
             </div>
-        </div>
-    </nav>
-
-    <!-- HEADER PODSTRONY -->
-    <header class="pt-32 pb-16 bg-mech-dark border-b border-gray-800 relative overflow-hidden">
-        <div class="absolute inset-0 z-0 opacity-5">
-            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5"/>
-                    </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#grid)" />
-            </svg>
-        </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <h1 class="font-tech text-5xl md:text-6xl font-bold text-white mb-4 uppercase tracking-wider">
-                Nasze <span class="text-mech-red">Projekty</span>
-            </h1>
-            <div class="w-24 h-1 bg-mech-red mx-auto rounded-full mb-6"></div>
-            <p class="text-xl text-gray-400 max-w-2xl mx-auto font-light">
-                Poznaj wszystkie konstrukcje i systemy, nad którymi aktualnie pracujemy i z których jesteśmy najbardziej dumni.
-            </p>
-        </div>
+        </nav>
     </header>
 
-    <!-- PEŁNA GALERIA PROJEKTÓW -->
-    <section class="py-24 bg-mech-black relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                
-                <!-- Projekt 1: ARES -->
-                <a href="projekt_robot_ares.html" class="flex flex-col bg-mech-card rounded-xl overflow-hidden group border border-gray-800 hover:border-mech-red transition-all duration-300 shadow-lg cursor-pointer">
-                    <div class="h-56 bg-gray-800 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1599577180570-89115f577eb8?auto=format&fit=crop&w=800&q=80" alt="Robot Rozpoznawczy ARES" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70 group-hover:opacity-100">
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <span class="text-mech-red text-xs font-bold uppercase tracking-wider">Robotyka / Rescue Tech</span>
-                        <h3 class="font-tech text-2xl font-bold text-white mt-2 mb-3">Robot Rozpoznawczy ARES</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Autonomiczna platforma gąsienicowa do mapowania taktycznego 3D i detekcji zagrożeń w trudnych warunkach pożarowych i wojskowych.</p>
-                        <span class="inline-flex items-center gap-2 text-sm text-white font-bold group-hover:text-mech-red transition-colors mt-auto">
-                            Czytaj więcej <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                        </span>
-                    </div>
-                </a>
-
-                <!-- Projekt 2: Ramię Bioniczne -->
-                <a href="projekt_rami_bioniczne.html" class="flex flex-col bg-mech-card rounded-xl overflow-hidden group border border-gray-800 hover:border-mech-red transition-all duration-300 shadow-lg cursor-pointer">
-                    <div class="h-56 bg-gray-800 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Ramię Bioniczne" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70 group-hover:opacity-100">
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <span class="text-mech-red text-xs font-bold uppercase tracking-wider">Automatyka</span>
-                        <h3 class="font-tech text-2xl font-bold text-white mt-2 mb-3">Ramię Bioniczne</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Prototyp lekkiego ramienia o 6 stopniach swobody, drukowany w technologii 3D z zaawansowanych polimerów. Sterowanie za pomocą sygnałów EMG.</p>
-                        <span class="inline-flex items-center gap-2 text-sm text-white font-bold group-hover:text-mech-red transition-colors mt-auto">
-                            Czytaj więcej <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                        </span>
-                    </div>
-                </a>
-
-                <!-- Projekt 3: Robot Astora -->
-                <a href="projekt_robot_astora.html" class="flex flex-col bg-mech-card rounded-xl overflow-hidden group border border-gray-800 hover:border-mech-red transition-all duration-300 shadow-lg cursor-pointer">
-                    <div class="h-56 bg-gray-800 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80" alt="Robot 6-osiowy Astora" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70 group-hover:opacity-100">
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <span class="text-mech-red text-xs font-bold uppercase tracking-wider">Automatyka / Robotyka</span>
-                        <h3 class="font-tech text-2xl font-bold text-white mt-2 mb-3">Robot 6-osiowy typu astora</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Edukacyjne, 6-osiowe ramię robotyczne stworzone w technologii druku 3D. Przystępna cenowo baza do nauki programowania w systemie ROS.</p>
-                        <span class="inline-flex items-center gap-2 text-sm text-white font-bold group-hover:text-mech-red transition-colors mt-auto">
-                            Czytaj więcej <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                        </span>
-                    </div>
-                </a>
-
-                <!-- Projekt 4: Inżynieria Odwrotna -->
-                <a href="projekt_in_ynieria_odwrotna.html" class="flex flex-col bg-mech-card rounded-xl overflow-hidden group border border-gray-800 hover:border-mech-red transition-all duration-300 shadow-lg cursor-pointer">
-                    <div class="h-56 bg-gray-800 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=800&q=80" alt="Inżynieria Odwrotna" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70 group-hover:opacity-100">
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <span class="text-mech-red text-xs font-bold uppercase tracking-wider">Automotive / R&D</span>
-                        <h3 class="font-tech text-2xl font-bold text-white mt-2 mb-3">Inżynieria Odwrotna</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Zautomatyzowana stacja skanowania 3D i fotogrametrii do odtwarzania wycofanych z produkcji części motoryzacyjnych z badaniami zmęczeniowymi.</p>
-                        <span class="inline-flex items-center gap-2 text-sm text-white font-bold group-hover:text-mech-red transition-colors mt-auto">
-                            Czytaj więcej <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                        </span>
-                    </div>
-                </a>
-
-                <!-- Projekt 5: Wytłaczarka -->
-                <a href="projekt_wyt_aczarka_filamentu.html" class="flex flex-col bg-mech-card rounded-xl overflow-hidden group border border-gray-800 hover:border-mech-red transition-all duration-300 shadow-lg cursor-pointer">
-                    <div class="h-56 bg-gray-800 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80" alt="Wytłaczarka Filamentu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70 group-hover:opacity-100">
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <span class="text-mech-red text-xs font-bold uppercase tracking-wider">Konstrukcja / R&D</span>
-                        <h3 class="font-tech text-2xl font-bold text-white mt-2 mb-3">Wytłaczarka Filamentu</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Maszyna badawczo-rozwojowa o wydajności 5 kg/h do produkcji i testowania innowacyjnych polimerów i kompozytów z domieszkami.</p>
-                        <span class="inline-flex items-center gap-2 text-sm text-white font-bold group-hover:text-mech-red transition-colors mt-auto">
-                            Czytaj więcej <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                        </span>
-                    </div>
-                </a>
-
-                <!-- Projekt 6: Szafa -->
-                <a href="projekt_szafa_filamentowa.html" class="flex flex-col bg-mech-card rounded-xl overflow-hidden group border border-gray-800 hover:border-mech-red transition-all duration-300 shadow-lg cursor-pointer">
-                    <div class="h-56 bg-gray-800 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&w=800&q=80" alt="Szafa na Filament" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70 group-hover:opacity-100">
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <span class="text-mech-red text-xs font-bold uppercase tracking-wider">Konstrukcja / Software</span>
-                        <h3 class="font-tech text-2xl font-bold text-white mt-2 mb-3">Inteligentna Szafa</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Zautomatyzowany system magazynowania materiałów do druku 3D z aktywną kontrolą wilgotności, podajnikiem i wbudowanym interfejsem HUD.</p>
-                        <span class="inline-flex items-center gap-2 text-sm text-white font-bold group-hover:text-mech-red transition-colors mt-auto">
-                            Czytaj więcej <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                        </span>
-                    </div>
-                </a>
-
+    <main>
+        <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex items-center min-h-[90vh]" aria-labelledby="hero-heading">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] md:w-[400px] md:h-[400px] bg-mech-red blur-[100px] md:blur-[150px] opacity-30 rounded-full pointer-events-none z-0"></div>
+            <div class="absolute inset-0 z-0 opacity-10">
+                <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <defs>
+                        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5"/>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#grid)" />
+                </svg>
             </div>
-        </div>
-    </section>
-
-        <!-- DOŁĄCZ DO ZESPOŁU -->
-    <section id="rekrutacja" class="py-24 bg-mech-black">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl">
-                <!-- Nagłówek i linia -->
-                <h2 class="font-tech text-4xl md:text-5xl font-bold text-white mb-4 uppercase">Dołącz do zespołu</h2>
-                <div class="w-full h-px bg-mech-red mb-8"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+                <span class="text-mech-red font-bold tracking-widest uppercase mb-2 block text-sm md:text-base">Politechnika Śląska | Działalność R&D</span>
                 
-                <!-- Treść -->
-                <p class="text-gray-400 text-lg md:text-xl mb-10 leading-relaxed">
-                    Zastanawiasz się, jak zostać częścią naszego zespołu?<br class="hidden sm:block">
-                    A może chcesz wesprzeć nas jako partner biznesowy?<br class="hidden sm:block">
-                    Napisz do nas i porozmawiajmy!
-                </p>
+                <h1 id="hero-heading" class="font-tech text-7xl md:text-[8rem] font-bold text-white mb-6 leading-none tracking-tight">
+                    MECHCORE
+                </h1>
 
-                <!-- Przyciski -->
+                <p class="mt-4 text-lg md:text-xl text-gray-400 max-w-2xl font-light mb-10 leading-relaxed">
+                    Stanowimy interdyscyplinarny zespół inżynierski funkcjonujący w ramach Politechniki Śląskiej. Prowadzimy prace badawczo-rozwojowe obejmujące projektowanie systemów cyberfizycznych, mechatronikę oraz zaawansowaną automatykę.
+                </p>
                 <div class="flex flex-col sm:flex-row gap-6">
-                    <a href="https://forms.gle/kbE7tPbeteWXin4X6" target="_blank" rel="noopener noreferrer" class="bg-mech-red hover:bg-mech-red-hover text-white px-12 py-4 font-sans font-semibold tracking-widest uppercase transition-colors duration-300 text-center">
-                        WYPEŁNIJ FORMULARZ
+                    <a href="https://forms.gle/kbE7tPbeteWXin4X6" class="border border-mech-red bg-mech-red hover:bg-mech-red-hover text-white px-12 py-4 font-sans font-semibold tracking-widest uppercase transition-colors duration-300 text-center shadow-[0_0_15px_rgba(220,38,38,0.2)]">
+                        Formularz kontaktowy
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ROZBUDOWANY FOOTER -->
-    <footer class="bg-[#050505] border-t border-gray-800 pt-16 pb-6 relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <section id="o-nas" class="py-16 bg-mech-dark" aria-labelledby="about-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <!-- Kolumna 1: Logo, Bio, Social Media -->
-                <div class="lg:col-span-1">
-                    <div class="flex items-center gap-2 mb-6">
-                        <i data-lucide="cpu" class="text-mech-red w-7 h-7"></i>
-                        <span class="font-tech text-2xl font-bold text-white tracking-wider">MECH<span class="text-mech-red">CORE</span></span>
+                <div class="mb-10">
+                    <h2 id="about-heading" class="font-tech text-3xl md:text-4xl font-bold text-white mb-3">Profil działalności</h2>
+                    <div class="w-full max-w-md h-px bg-mech-red"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <div class="text-center">
+                        <div class="text-5xl md:text-6xl font-bold text-mech-red mb-2">20</div>
+                        <div class="font-bold text-white uppercase tracking-wider text-base">INŻYNIERÓW</div>
+                        <div class="text-gray-500 mt-1 text-sm">Z interdyscyplinarnym zapleczem</div>
                     </div>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6 text-justify">
-                        SKN Mechcore jest kołem studenckim działającym przy Politechnice Śląskiej w Gliwicach. Skupiamy pasjonatów inżynierii, mechaniki i nowoczesnych technologii. Regularnie realizujemy innowacyjne projekty techniczne.
-                    </p>
-                    <div class="flex gap-5">
-                        <a href="#" aria-label="Odwiedź nasz profil na Facebooku" target="_blank" rel="noopener noreferrer" class="text-white hover:text-mech-red transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-                        <a href="#" aria-label="Odwiedź nasz profil na Instagramie" target="_blank" rel="noopener noreferrer" class="text-white hover:text-mech-red transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-                        <a href="#" aria-label="Odwiedź nasz profil na LinkedIn" target="_blank" rel="noopener noreferrer" class="text-white hover:text-mech-red transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
-                        <a href="#" aria-label="Odwiedź nasz kanał na YouTube" target="_blank" rel="noopener noreferrer" class="text-white hover:text-mech-red transition-colors"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+                    <div class="text-center">
+                        <div class="text-5xl md:text-6xl font-bold text-mech-red mb-2">6</div>
+                        <div class="font-bold text-white uppercase tracking-wider text-base">PROTOTYPÓW</div>
+                        <div class="text-gray-500 mt-1 text-sm">W fazie aktywnego rozwoju (R&D)</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-5xl md:text-6xl font-bold text-mech-red mb-2">4</div>
+                        <div class="font-bold text-white uppercase tracking-wider text-base">WYDZIAŁY</div>
+                        <div class="text-gray-500 mt-1 text-sm">Integrujące mechanikę, elektronikę i IT</div>
                     </div>
                 </div>
 
-                <!-- Kolumna 2: Nawigacja -->
+                <div class="max-w-5xl">
+                    <h3 class="font-tech text-xl font-bold text-white mb-3">Struktura zespołu</h3>
+                    <p class="text-gray-400 leading-relaxed mb-6 text-justify">
+                        SKN Inżynierii Konstrukcyjnej i Systemów Technicznych „MechCore” gromadzi uzdolnionych studentów Politechniki Śląskiej, ukierunkowanych na rozwój innowacyjnych technologii. Architektura naszego koła opiera się na strukturze projektowej, co umożliwia symultaniczne prowadzenie prac nad różnorodnymi systemami – od autonomicznych platform mobilnych, po zaawansowane układy akwizycji danych i systemy wbudowane. Synergia kompetencji z zakresu projektowania CAD/CAE, inżynierii materiałowej, elektroniki oraz programowania niskopoziomowego pozwala nam na kompleksową realizację projektów technologicznych.
+                    </p>
+                    <a href="onas.html" class="inline-block bg-mech-red hover:bg-mech-red-hover text-white px-8 py-3 font-sans font-semibold tracking-widest uppercase transition-colors duration-300">
+                        POZNAJ SZCZEGÓŁY
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="projekty" class="py-24 bg-mech-black relative" aria-labelledby="projects-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-16 text-center">
+                    <h2 id="projects-heading" class="font-tech text-4xl md:text-5xl font-bold text-white mb-4">Nasze <span class="text-mech-red">Porjekty</span></h2>
+                    <div class="w-24 h-1 bg-mech-red mx-auto rounded-full"></div>
+                    <p class="mt-6 text-gray-400 max-w-2xl mx-auto">Przegląd opracowywanych przez nas architektur sprzętowych, systemów sterowania i układów mechatronicznych.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <article class="bg-mech-card rounded-xl overflow-hidden group border border-gray-800 hover:border-mech-red transition-all duration-300">
+                        <a href="projekt_robot_ares.html" class="block h-full cursor-pointer">
+                            <div class="h-48 bg-gray-800 relative overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=800&q=80" alt="Moduł analizy próbek zintegrowany z platformą UGV X-Rover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70 group-hover:opacity-100">
+                            </div>
+                            <div class="p-6">
+                                <span class="text-mech-red text-xs font-bold uppercase tracking-wider">Robotyka Mobilna / UGV</span>
+                                <h3 class="font-tech text-2xl font-bold text-white mt-2 mb-3">Robot Rozpoznawczy ARES</h3>
+                                <p class="text-gray-400 text-sm">Bezzałogowa platforma lądowa (UGV) przeznaczona do autonomicznej eksploracji terenów zagrożonych. Wyposażona w optyczne systemy wizyjne oraz moduły do poboru prób powietrza.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="bg-mech-card rounded-xl overflow-hidden group border border-gray-800 hover:border-mech-red transition-all duration-300">
+                        <a href="projekt_rami_bioniczne.html" class="block h-full cursor-pointer">
+                            <div class="h-48 bg-gray-800 relative overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Inżynier kalibrujący serwomechanizmy ramienia bionicznego" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70 group-hover:opacity-100">
+                            </div>
+                            <div class="p-6">
+                                <span class="text-mech-red text-xs font-bold uppercase tracking-wider">Biomechatronika / DSP</span>
+                                <h3 class="font-tech text-2xl font-bold text-white mt-2 mb-3">Manipulator Bioniczny</h3>
+                                <p class="text-gray-400 text-sm">6-osiowy (6-DoF) protezowy manipulator wytworzony w technologii druku 3D. Wykorzystuje cyfrowe przetwarzanie sygnałów (DSP) do analizy potencjałów elektromiograficznych (EMG) operatora.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="bg-mech-card rounded-xl overflow-hidden group border border-gray-800 hover:border-mech-red transition-all duration-300">
+                        <a href="projekt_symulator.html" class="block h-full cursor-pointer">
+                            <div class="h-48 bg-gray-800 relative overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1580828369019-2238f6b0f69a?auto=format&fit=crop&w=800&q=80" alt="Platforma testowa systemu lotu z interfejsem sterującym" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70 group-hover:opacity-100">
+                            </div>
+                            <div class="p-6">
+                                <span class="text-mech-red text-xs font-bold uppercase tracking-wider">Automatyka / Robotyka</span>
+                                <h3 class="font-tech text-2xl font-bold text-white mt-2 mb-3">6-osiowe ramie robota</h3>
+                                <p class="text-gray-400 text-sm">Edukacyjne, 6-osiowe ramie robotyczne stworzone w technologii druku 3D. Baza do nauki programowania w systemie ROS</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+
+                <div class="mt-16 flex justify-center">
+                    <a href="projekty.html" class="border border-mech-red bg-transparent hover:bg-mech-red text-mech-red hover:text-white px-12 py-4 font-sans font-semibold tracking-widest uppercase transition-colors duration-300 text-center">
+                        WSZYSTKIE PROJEKTY
+                    </a>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="wspolpraca" class="py-12 bg-mech-card border-y border-gray-800 shadow-[0_0_30px_rgba(0,0,0,0.5)] z-10 relative" aria-labelledby="partners-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="flex flex-col gap-12 md:gap-16">
+                    <div>
+                        <div class="text-center mb-8">
+                            <h2 id="partners-heading" class="text-sm font-bold text-gray-500 tracking-widest uppercase">Współpraca Międzywydziałowa</h2>
+                        </div>
+                        <div class="flex flex-wrap justify-center items-start gap-6 md:gap-10">
+                            <a href="https://www.polsl.pl/rar/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-3 group w-32 md:w-40" aria-label="Strona Wydziału Architektury">
+                                <div class="bg-white/5 px-4 py-2 rounded-lg group-hover:bg-white/10 transition-colors h-16 md:h-20 w-full flex items-center justify-center">
+                                    <img src="logo_arch.png" alt="Logotyp Wydziału Architektury Politechniki Śląskiej" class="max-w-full max-h-full object-contain mx-auto">
+                                </div>
+                                <span class="text-[10px] md:text-xs text-gray-400 font-semibold uppercase tracking-widest text-center group-hover:text-white transition-colors">Wydział Architektury</span>
+                            </a>
+                            
+                            <a href="https://www.polsl.pl/rch/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-3 group w-32 md:w-40" aria-label="Strona Wydziału Chemicznego">
+                                <div class="bg-white/5 px-4 py-2 rounded-lg group-hover:bg-white/10 transition-colors h-16 md:h-20 w-full flex items-center justify-center">
+                                    <img src="RCH.png" alt="Logotyp Wydziału Chemicznego Politechniki Śląskiej" class="max-w-full max-h-full object-contain mx-auto">
+                                </div>
+                                <span class="text-[10px] md:text-xs text-gray-400 font-semibold uppercase tracking-widest text-center group-hover:text-white transition-colors">Wydział Chemiczny</span>
+                            </a>
+                            
+                            <a href="https://www.polsl.pl/re/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-3 group w-32 md:w-40" aria-label="Strona Wydziału Elektrycznego">
+                                <div class="bg-white/5 px-4 py-2 rounded-lg group-hover:bg-white/10 transition-colors h-16 md:h-20 w-full flex items-center justify-center">
+                                    <img src="logoRE100.png" alt="Logotyp Wydziału Elektrycznego Politechniki Śląskiej" class="max-w-full max-h-full object-contain mx-auto">
+                                </div>
+                                <span class="text-[10px] md:text-xs text-gray-400 font-semibold uppercase tracking-widest text-center group-hover:text-white transition-colors">Wydział Elektryczny</span>
+                            </a>
+                            
+                            <a href="https://www.polsl.pl/rib/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-3 group w-32 md:w-40" aria-label="Strona Wydziału Inżynierii Biomedycznej">
+                                <div class="bg-white/5 px-4 py-2 rounded-lg group-hover:bg-white/10 transition-colors h-16 md:h-20 w-full flex items-center justify-center">
+                                    <img src="WIB_logo.png" alt="Logotyp Wydziału Inżynierii Biomedycznej Politechniki Śląskiej" class="max-w-full max-h-full object-contain mx-auto">
+                                </div>
+                                <span class="text-[10px] md:text-xs text-gray-400 font-semibold uppercase tracking-widest text-center group-hover:text-white transition-colors">Wydział Inżynierii Biomedycznej</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="text-center mb-8">
+                            <h3 class="text-sm font-bold text-gray-500 tracking-widest uppercase">Partnerzy Technologiczni</h3>
+                        </div>
+                        <div class="flex flex-wrap justify-center items-center gap-10 md:gap-14">
+                            <a href="https://www.hospel.pl/" target="_blank" rel="noopener noreferrer" aria-label="Strona firmy Hospel" class="font-tech text-xl md:text-2xl font-bold text-gray-300 leading-none flex flex-col justify-center text-center px-4 py-2 bg-white/5 rounded-lg hover:bg-white/10 transition-colors h-16 md:h-20 w-40 md:w-48">
+                                <img src="hospel.png" alt="Logotyp firmy inżynieryjnej Hospel" class="max-w-full max-h-full object-contain mx-auto">
+                            </a>
+                            <div class="font-tech text-xl md:text-2xl font-bold text-gray-300 leading-none flex flex-col justify-center text-center px-4 py-2 bg-white/5 rounded-lg hover:bg-white/10 transition-colors cursor-default h-16 md:h-20 w-40 md:w-48">
+                                <img src="Piomet-logo_v3_alpha.png" alt="Logotyp firmy produkcyjnej Piomet" class="max-w-full max-h-full object-contain mx-auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="rekrutacja" class="py-24 bg-mech-black" aria-labelledby="cta-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl">
+                    <h2 id="cta-heading" class="font-tech text-4xl md:text-5xl font-bold text-white mb-4 uppercase">Dołącz do zespołu</h2>
+                    <div class="w-full h-px bg-mech-red mb-8"></div>
+                    
+                    <p class="text-gray-400 text-lg md:text-xl mb-10 leading-relaxed">
+                        Poszukujemy inżynierów i studentów ukierunkowanych na rozwój w dziedzinach mechatroniki, analizy systemowej oraz projektowania sprzętowego.<br class="hidden sm:block">
+                        Jesteś reprezentantem podmiotu komercyjnego i szukasz przestrzeni do wdrożeń testowych?<br class="hidden sm:block">
+                        Zapraszamy do kontaktu.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-6">
+                        <a href="https://forms.gle/kbE7tPbeteWXin4X6" target="_blank" rel="noopener noreferrer" class="bg-mech-red hover:bg-mech-red-hover text-white px-12 py-4 font-sans font-semibold tracking-widest uppercase transition-colors duration-300 text-center">
+                            FORMULARZ KONTAKTOWY
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#050505] border-t border-gray-800 pt-16 pb-6 relative z-10" aria-label="Stopka strony">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <i data-lucide="cpu" class="text-mech-red w-7 h-7" aria-hidden="true"></i>
+                        <span class="font-tech text-2xl font-bold text-white tracking-wider">MECH<span class="text-mech-red">CORE</span></span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6 text-justify">
+                        SKN Inżynierii Konstrukcyjnej i Systemów Technicznych „MechCore” przy Politechnice Śląskiej w Gliwicach. Skupiamy się na wdrożeniach układów automatyki, robotyki i konstrukcji mechanicznych w ujęciu R&D.
+                    </p>
+                    <div class="flex gap-5">
+                        <a href="#" aria-label="Profil Mechcore na Facebooku" target="_blank" rel="noopener noreferrer" class="text-white hover:text-mech-red transition-colors"><i data-lucide="facebook" class="w-5 h-5" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Profil Mechcore na Instagramie" target="_blank" rel="noopener noreferrer" class="text-white hover:text-mech-red transition-colors"><i data-lucide="instagram" class="w-5 h-5" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Profil Mechcore na LinkedIn" target="_blank" rel="noopener noreferrer" class="text-white hover:text-mech-red transition-colors"><i data-lucide="linkedin" class="w-5 h-5" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Kanał Mechcore na YouTube" target="_blank" rel="noopener noreferrer" class="text-white hover:text-mech-red transition-colors"><i data-lucide="youtube" class="w-5 h-5" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
                 <div>
-                    <h3 class="text-mech-red font-bold text-lg mb-6">Nawigacja</h3>
+                    <h3 class="text-mech-red font-bold text-lg mb-6">Struktura Witryny</h3>
                     <ul class="space-y-3 text-sm text-gray-300">
                         <li><a href="onas.html" class="hover:text-white transition-colors">O nas</a></li>
                         <li><a href="projekty.html" class="hover:text-white transition-colors">Projekty</a></li>
@@ -276,61 +331,56 @@
                     </ul>
                 </div>
 
-                <!-- Kolumna 3: Informacje -->
                 <div>
-                    <h3 class="text-mech-red font-bold text-lg mb-6">Informacje</h3>
+                    <h3 class="text-mech-red font-bold text-lg mb-6">Zasoby i Procedury</h3>
                     <ul class="space-y-3 text-sm text-gray-300">
-                        <li><a href="https://forms.gle/kbE7tPbeteWXin4X6" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Sponsoring</a></li>
-                        <li><a href="https://forms.gle/kbE7tPbeteWXin4X6" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Rekrutacja</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Polityka prywatności</a></li>
+                        <li><a href="https://forms.gle/kbE7tPbeteWXin4X6" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Aplikacja Partnerska</a></li>
+                        <li><a href="https://forms.gle/kbE7tPbeteWXin4X6" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Proces Rekrutacyjny</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Polityka Prywatności</a></li>
                     </ul>
                 </div>
 
-                <!-- Kolumna 4: Kontakt -->
                 <div>
-                    <h3 class="text-mech-red font-bold text-lg mb-6">Kontakt</h3>
+                    <h3 class="text-mech-red font-bold text-lg mb-6">Dane Kontaktowe</h3>
                     <ul class="space-y-4 text-sm text-gray-300">
                         <li class="flex items-start gap-3">
-                            <i data-lucide="phone" class="w-5 h-5 text-gray-400 shrink-0"></i>
+                            <i data-lucide="phone" class="w-5 h-5 text-gray-400 shrink-0" aria-hidden="true"></i>
                             <span>+48 733 990 885</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <i data-lucide="mail" class="w-5 h-5 text-gray-400 shrink-0"></i>
+                            <i data-lucide="mail" class="w-5 h-5 text-gray-400 shrink-0" aria-hidden="true"></i>
                             <a href="mailto:mechcore.polsl@gmail.com" class="hover:text-white transition-colors break-all">mechcore.polsl@gmail.com</a>
                         </li>
                         <li class="flex items-start gap-3">
-                            <i data-lucide="map-pin" class="w-5 h-5 text-gray-400 shrink-0"></i>
-                            <span>Stanisława Konarskiego 18A,<br>44-100 Gliwice</span>
+                            <i data-lucide="map-pin" class="w-5 h-5 text-gray-400 shrink-0" aria-hidden="true"></i>
+                            <address class="not-italic">Stanisława Konarskiego 18A,<br>44-100 Gliwice</address>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Dolny pasek -->
             <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
-                <div>
-                    Projekt i wykonanie: <span class="text-gray-400">Tomasz P.</span>
-                </div>
-                <div>
-                    &copy; Wszelkie prawa zastrzeżone | Mechcore 2026
-                </div>
+                <div>Architektura oprogramowania: <span class="text-gray-400">Tomasz P.</span></div>
+                <div>&copy; 2026 SKN Mechcore. Wszelkie prawa zastrzeżone.</div>
             </div>
         </div>
     </footer>
 
-    <!-- Skrypty -->
     <script>
         lucide.createIcons();
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
 
         mobileMenuBtn.addEventListener('click', () => {
+            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
             mobileMenu.classList.toggle('hidden');
         });
 
         const mobileLinks = mobileMenu.querySelectorAll('a');
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
                 mobileMenu.classList.add('hidden');
             });
         });
